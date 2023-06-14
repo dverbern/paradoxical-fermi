@@ -1,24 +1,21 @@
-﻿#==================================================================================================================================================================================
+﻿#=========================================================================================================================
+
 # Create an *.m3u playlist of a specific folder, assuming it contains *.flac or *.mp3 files.
-# Playlist uses relative paths to the audio files so users can move the folders where they wish and shouldn't break the playlist.
+# Playlist uses relative paths to the audio files so users can move the folders where they wish and 
+# shouldn't break the playlist.
 #
 # Using tentative GUI skills I've been developing!
 #               
 # Author:       Daniel Verberne
-# Last Updated: 11/01/2021
-#==================================================================================================================================================================================
-
-#-----------------------------------------------------------[Functions]------------------------------------------------------------
+# Last Updated: 15/06/2023
+#=========================================================================================================================
 
 Function Generate-Form
 {
-
-    #---------------------------------------------------------[Initialisations]--------------------------------------------------------
     # Init PowerShell Gui
     Add-Type -AssemblyName System.Windows.Forms
     Add-Type -AssemblyName System.Drawing
 
-    #---------------------------------------------------------[Form]--------------------------------------------------------
     [System.Windows.Forms.Application]::EnableVisualStyles()
 
     $formDefault                     = New-Object System.Windows.Forms.Form
@@ -212,4 +209,4 @@ Function SpecificFolderButtonClick()
 # Guts of program start below by calling the first function.
 Generate-Form
 Set-Location -Path "C:\Users\Public\Desktop\PowerShell"
-#==================================================================================================================================================================================
+#=========================================================================================================================
