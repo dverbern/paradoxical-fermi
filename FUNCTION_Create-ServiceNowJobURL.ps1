@@ -7,9 +7,10 @@
 #=========================================================================================================================
 # Global variables
 #-------------------------------------------------------------------------------------------------------------------------
-$SNOWURL = "https://yarravalley.service-now.com/nav_to.do?uri=TICKETTYPE.do?sys_id=JOBNUMBER"
+# Below - update for your specific ServiceNow environment
+$SNOWBaseURL = "https://your-servicenow-environment-domain.com"
+$SNOWURL = "$($SNOWBaseURL)/nav_to.do?uri=TICKETTYPE.do?sys_id=JOBNUMBER"
 $RegexValidateSNOWJobNumber = '^(INC|RITM|S?CTASK)\d{7}$'
-
 #-------------------------------------------------------------------------------------------------------------------------
 # Create hyperlinks to ServiceNow tickets
 function Create-ServiceNowJobURL
